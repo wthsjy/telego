@@ -6342,6 +6342,15 @@ type SuccessfulPayment struct {
 	// InvoicePayload - Bot-specified invoice payload
 	InvoicePayload string `json:"invoice_payload"`
 
+	// SubscriptionExpirationDate	Optional. Expiration date of the subscription, in Unix time; for recurring payments only
+	SubscriptionExpirationDate int `json:"subscription_expiration_date,omitempty"`
+
+	//IsRecurring Optional, True if the payment is a recurring payment for a subscription
+	IsRecurring int `json:"is_recurring,omitempty"`
+	
+ 	//IsFirstRecurring Optional. True, if the payment is the first payment for a subscription
+	IsFirstRecurring int `json:"is_first_recurring,omitempty"`
+
 	// ShippingOptionID - Optional. Identifier of the shipping option chosen by the user
 	ShippingOptionID string `json:"shipping_option_id,omitempty"`
 
