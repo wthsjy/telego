@@ -6346,10 +6346,10 @@ type SuccessfulPayment struct {
 	SubscriptionExpirationDate int `json:"subscription_expiration_date,omitempty"`
 
 	//IsRecurring Optional, True if the payment is a recurring payment for a subscription
-	IsRecurring int `json:"is_recurring,omitempty"`
+	IsRecurring bool `json:"is_recurring,omitempty"`
 	
  	//IsFirstRecurring Optional. True, if the payment is the first payment for a subscription
-	IsFirstRecurring int `json:"is_first_recurring,omitempty"`
+	IsFirstRecurring bool `json:"is_first_recurring,omitempty"`
 
 	// ShippingOptionID - Optional. Identifier of the shipping option chosen by the user
 	ShippingOptionID string `json:"shipping_option_id,omitempty"`
